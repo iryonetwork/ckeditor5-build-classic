@@ -216,6 +216,13 @@
     "@ckeditor/ckeditor5-ui" "^14.0.0"
     "@ckeditor/ckeditor5-utils" "^14.0.0"
 
+"@ckeditor/ckeditor5-markdown-gfm@^11.0.5":
+  version "11.0.5"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-markdown-gfm/-/ckeditor5-markdown-gfm-11.0.5.tgz#addaa6026fbb2dc1e30f1ff318bd18c25b9ba2e4"
+  integrity sha512-kAPMOSsU7VUb7xmwy943jsvHH3vqcqcpiXL9QWt8XvHFpJT14Pk29zvTTiHeNVT7s0AkdWQ7yJTCunMiOoqC+Q==
+  dependencies:
+    "@ckeditor/ckeditor5-engine" "^14.0.0"
+
 "@ckeditor/ckeditor5-media-embed@^11.1.4":
   version "11.1.4"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-media-embed/-/ckeditor5-media-embed-11.1.4.tgz#3778914f390308a4644a58740484331b1025b98e"
