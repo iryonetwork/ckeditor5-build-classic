@@ -20,6 +20,12 @@ import List from '@ckeditor/ckeditor5-list/src/list';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 
+import GFMDataProcessor from '@ckeditor/ckeditor5-markdown-gfm/src/gfmdataprocessor';
+
+function Markdown( editor ) {
+	editor.data.processor = new GFMDataProcessor();
+}
+
 export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
@@ -36,7 +42,8 @@ ClassicEditor.builtinPlugins = [
 	Link,
 	List,
 	Paragraph,
-	PasteFromOffice
+	PasteFromOffice,
+	Markdown
 ];
 
 // Editor configuration.
