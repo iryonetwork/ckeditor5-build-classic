@@ -22,6 +22,8 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 
 import GFMDataProcessor from '@ckeditor/ckeditor5-markdown-gfm/src/gfmdataprocessor';
 
+import Placeholder from './placeholder/placeholder';
+
 function Markdown( editor ) {
 	editor.data.processor = new GFMDataProcessor();
 }
@@ -43,6 +45,7 @@ ClassicEditor.builtinPlugins = [
 	List,
 	Paragraph,
 	PasteFromOffice,
+	Placeholder,
 	Markdown
 ];
 
@@ -58,6 +61,8 @@ ClassicEditor.defaultConfig = {
 			'bulletedList',
 			'numberedList',
 			'blockQuote',
+			'|',
+			'placeholder',
 			'undo',
 			'redo'
 		]
