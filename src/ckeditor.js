@@ -50,7 +50,7 @@ import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount.js';
 import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter.js';
 import Markdown from '@ckeditor/ckeditor5-markdown-gfm/src/markdown.js';
 
-import Placeholder from './placeholder/placeholder';
+import Smartcode from './placeholder/placeholder';
 
 
 
@@ -102,7 +102,7 @@ const plugins =[
 	Underline,
 	WordCount,
 	SimpleUploadAdapter,
-	Placeholder
+	Smartcode
 ];
 
 DecoupledEditor.builtinPlugins = plugins;
