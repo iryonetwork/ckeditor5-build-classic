@@ -57,7 +57,7 @@ import Smartcode from './placeholder/placeholder';
 class DecoupledEditor extends DecoupledDocumentEditorBase {}
 class ClassicEditor extends ClassicEditorBase {}
 
-const plugins =[
+const decoupledPlugins =[
 	Alignment,
 	Autoformat,
 	BlockQuote,
@@ -105,8 +105,27 @@ const plugins =[
 	Smartcode
 ];
 
-DecoupledEditor.builtinPlugins = plugins;
-ClassicEditor.builtinPlugins = [...plugins, Markdown];
+const markdownPlugins = [
+	Essentials,
+	UploadAdapter,
+	Autoformat,
+	Bold,
+	Italic,
+	BlockQuote,
+	CKFinder,
+	EasyImage,
+	Heading,
+	Link,
+	List,
+	Paragraph,
+	PasteFromOffice,
+	Smartcode,
+	Markdown
+];
+
+
+DecoupledEditor.builtinPlugins = decoupledPlugins;
+ClassicEditor.builtinPlugins = markdownPlugins;
 
 // Editor configuration.
 ClassicEditor.defaultConfig = {
@@ -173,6 +192,20 @@ DecoupledEditor.defaultConfig = {
 			'redo'
 		]
 	},
+	image: {
+		// Configure the available styles.
+		styles: ['alignLeft', 'alignCenter', 'alignRight', 'full'],
+
+		// You need to configure the image toolbar, too, so it shows the new style
+		// buttons as well as the resize buttons.
+		toolbar: [
+			'imageStyle:alignLeft',
+			'imageStyle:alignCenter',
+			'imageStyle:alignRight',
+			'imageStyle:full',
+			'imageTextAlternative'
+		]
+	}
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'en'
 };
