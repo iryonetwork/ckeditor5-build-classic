@@ -50,7 +50,7 @@ import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount.js';
 import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter.js';
 import Markdown from '@ckeditor/ckeditor5-markdown-gfm/src/markdown.js';
 
-import Smartcode from './placeholder/placeholder';
+import Smartcode from './smartcode/smartcode';
 
 
 
@@ -107,13 +107,10 @@ const decoupledPlugins =[
 
 const markdownPlugins = [
 	Essentials,
-	UploadAdapter,
 	Autoformat,
 	Bold,
 	Italic,
 	BlockQuote,
-	CKFinder,
-	EasyImage,
 	Heading,
 	Link,
 	List,
@@ -205,7 +202,7 @@ DecoupledEditor.defaultConfig = {
 			'imageStyle:full',
 			'imageTextAlternative'
 		]
-	}
+	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'en'
 };
