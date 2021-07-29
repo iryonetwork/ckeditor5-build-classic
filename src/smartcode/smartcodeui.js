@@ -23,6 +23,7 @@ export default class SmartcodeUI extends Plugin {
 				// The t() function helps localize the editor. All strings enclosed in t() can be
 				// translated and change when the language of the editor changes.
 				label: t( 'Smartcode' ),
+				class: 'smartcode-dropdown',
 				tooltip: true,
 				withText: true
 			} );
