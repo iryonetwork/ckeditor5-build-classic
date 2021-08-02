@@ -42,16 +42,15 @@ export default class SmartcodeUI extends Plugin {
 function getDropdownItemsDefinitions( smartcodeNames ) {
 	const itemDefinitions = new Collection();
 
-	for ( const name of smartcodeNames ) {
+	for (let i = 0; i < smartcodeNames.length; i++) {
 		const definition = {
 			type: 'button',
 			model: new Model( {
-				commandParam: name,
-				label: name,
+				commandParam: smartcodeNames[i].value,
+				label: smartcodeNames[i].label,
 				withText: true
 			} )
 		};
-
 		// Add the item definition to the collection.
 		itemDefinitions.add( definition );
 	}
